@@ -51,6 +51,14 @@ dotnet run --project src/Wane.Api
 - Language: English for code, comments and docs.
 - Keep this file short. Put detail in `docs/`.
 
+## Pull requests
+
+Every PR description must have:
+- **Introduction:** a short paragraph saying what the PR is about.
+- **What it brings:** a description of the change and why it was made.
+- **Files added:** the list of new files, each with a one-line purpose.
+- **Files modified:** the list of changed files, each with what changed.
+
 ## Git and permissions
 
 - Attribution: commit and PR attribution are set to empty strings, which enforces the no-AI-attribution rule mechanically.

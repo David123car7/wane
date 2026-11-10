@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Wane.Api/Wane.Api.csproj" />
+    <Project Path="src/Wane.Application/Wane.Application.csproj" />
+    <Project Path="src/Wane.Domain/Wane.Domain.csproj" />
+    <Project Path="src/Wane.Infrastructure/Wane.Infrastructure.csproj" />
+  </Folder>
+</Solution>

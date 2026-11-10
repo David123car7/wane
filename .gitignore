@@ -1,0 +1,45 @@
+# Build output
+bin/
+obj/
+out/
+publish/
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# IDEs and editors
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.swp
+
+# Test results and coverage
+TestResults/
+coverage/
+*.trx
+
+# Logs
+*.log
+logs/
+
+# Secrets and local config
+.env
+.env.*
+appsettings.Local.json
+*.pfx
+secrets.json
+
+# Local data (Docker volumes, uploaded audio)
+data/
+media/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db

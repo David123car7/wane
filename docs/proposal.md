@@ -1,8 +1,5 @@
 # Project Proposal: Music Streaming Platform Backend
 
-**Student:** David Carvalho
-**Programme:** Master's in Informatics Engineering, IPCA
-**Supervisor:** [Teacher's name]
 **Date:** November 2026
 
 ---
@@ -15,7 +12,7 @@ A player and frontend are outside the scope of this proposal. The backend will b
 
 ## 2. Motivation
 
-Audio streaming is a good example of a backend system where several engineering problems meet: media processing, large file storage, network delivery, caching, concurrency and scalability. It also lets me apply and deepen my knowledge in C#/.NET, relational databases, background processing and containerised deployment, which are directly relevant to a career in backend development.
+Audio streaming is a good example of a backend system where several engineering problems meet: media processing, large file storage, network delivery, caching, concurrency and scalability. It is also a practical way to apply C#/.NET, relational databases, background processing and containerised deployment in a realistic backend system.
 
 ## 3. Objectives
 
@@ -88,7 +85,7 @@ The project will be developed incrementally, in layers, so that each phase produ
 3. **Transcoding and adaptive streaming:** background worker, multiple bitrates and HLS.
 4. **Optimisation:** caching, performance tuning and load testing.
 5. **Optional C++ module:** C# baseline, C++ implementation, integration and comparison benchmarks.
-6. **Documentation and report:** final report, API documentation and results analysis.
+6. **Documentation:** API documentation and results analysis.
 
 ## 7. Evaluation
 
@@ -120,8 +117,3 @@ Only royalty-free, Creative Commons or self-produced audio will be used for deve
 - API documentation
 - Performance test results and analysis
 - *(Optional)* C++ module with a C# vs C++ benchmark comparison
-- Final project report
-
----
-
-*This proposal is submitted for the supervisor's approval and may be adjusted following feedback.*

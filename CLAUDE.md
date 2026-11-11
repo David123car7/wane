@@ -1,6 +1,6 @@
 # Wane
 
-Backend of a music streaming platform (Master's project, IPCA). C# / ASP.NET Core, PostgreSQL with EF Core.
+Backend of a music streaming platform. C# / ASP.NET Core, PostgreSQL with EF Core.
 Read `docs/proposal.md` for scope and `docs/architecture.md` for the architecture.
 
 ## How to use Claude in this project

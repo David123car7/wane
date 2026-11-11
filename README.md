@@ -29,6 +29,13 @@ dotnet build
 dotnet run --project src/Wane.Host
 ```
 
+## Documentation
+
+- [Development guide](docs/development.md): set up the project locally, configuration and database migrations.
+- [Architecture](docs/architecture.md): the Onion architecture explained.
+- [Decisions](docs/decisions/): one short file per decision.
+- [Project proposal](docs/proposal.md): scope and objectives.
+
 ## Structure
 
 ```

@@ -12,7 +12,7 @@ Before proposing or reviewing anything, read `docs/decisions/` and follow what i
 
 ## Where things are
 
-- `src/`: the code (`Wane.Domain`, `Wane.Application`, `Wane.Infrastructure`, `Wane.Api`).
+- `src/`: the code (`Wane.Domain`, `Wane.Application`, `Wane.Infrastructure`, `Wane.Api`, `Wane.Host`).
 - `tests/`: test projects.
 - `deploy/`: Docker / Docker Compose.
 - `docs/proposal.md`: project scope and objectives.
@@ -25,7 +25,7 @@ Before proposing or reviewing anything, read `docs/decisions/` and follow what i
 ```
 dotnet build
 dotnet test
-dotnet run --project src/Wane.Api
+dotnet run --project src/Wane.Host
 ```
 
 ## Conventions

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wane.Api\Wane.Api.csproj" />
+    <ProjectReference Include="..\Wane.Application\Wane.Application.csproj" />
+    <ProjectReference Include="..\Wane.Infrastructure\Wane.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c5dbbfb8-7bdb-489a-bfb5-77cfeb251d8a</UserSecretsId>
+  </PropertyGroup>
+
+</Project>

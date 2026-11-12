@@ -4,8 +4,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Wane.Domain.Entities;
 
+/// <summary>
+/// Maps <see cref="User"/> to the <c>users</c> table.
+/// </summary>
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
+    /// <summary>
+    /// Sets the table, the key, a unique index on the username and the column rules
+    /// (required username of up to 100 characters, required password hash of up to 256).
+    /// </summary>
+    /// <param name="builder">The builder of the entity.</param>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.ToTable("users");

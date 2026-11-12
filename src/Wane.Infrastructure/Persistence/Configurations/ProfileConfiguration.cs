@@ -4,8 +4,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Wane.Domain.Entities;
 
+/// <summary>
+/// Maps <see cref="Profile"/> to the <c>profiles</c> table.
+/// </summary>
 public class ProfileConfiguration : IEntityTypeConfiguration<Profile>
 {
+    /// <summary>
+    /// Sets the table, the key, a unique index on the name, the column rules
+    /// (required name of up to 100 characters, code of up to 4) and the required relation to the user,
+    /// which cannot be deleted while it has profiles.
+    /// </summary>
+    /// <param name="builder">The builder of the entity.</param>
     public void Configure(EntityTypeBuilder<Profile> builder)
     {
         builder.ToTable("profiles");

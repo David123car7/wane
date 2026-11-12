@@ -8,7 +8,7 @@
 
 Rules that depend on stored data (for example a duplicate profile name) are business checks in the services and throw the matching exception, as described in `error-handling.md`.
 
-**Mapping** between entities and DTOs is written by hand. For reads, repositories can project straight to DTOs in the query, which removes much of the mapping.
+**Mapping** between entities and DTOs is written by hand, as extension methods next to the DTOs in Application. For reads, repositories can project straight to DTOs in the query, which removes much of the mapping.
 
 ## Why
 
@@ -31,4 +31,3 @@ If hand-written mapping becomes too repetitive, a library could be used.
 
 - When hand-written mapping is repetitive enough to adopt a library.
 - When data annotations stop being enough and FluentValidation is added.
-- Where the mapping code lives (for example next to the DTOs in Application).

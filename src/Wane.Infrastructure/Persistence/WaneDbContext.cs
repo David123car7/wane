@@ -10,4 +10,9 @@ public class WaneDbContext : DbContext
 
     public WaneDbContext(DbContextOptions<WaneDbContext> options)
         : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.ApplyConfigurationsFromAssembly(typeof(WaneDbContext).Assembly);
+    }
 }

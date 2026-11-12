@@ -12,11 +12,12 @@ Before proposing or reviewing anything, read `docs/decisions/` and follow what i
 
 ## Where things are
 
-- `src/`: the code (`Wane.Domain`, `Wane.Application`, `Wane.Infrastructure`, `Wane.Api`).
+- `src/`: the code (`Wane.Domain`, `Wane.Application`, `Wane.Infrastructure`, `Wane.Api`, `Wane.Host`).
 - `tests/`: test projects.
 - `deploy/`: Docker / Docker Compose.
 - `docs/proposal.md`: project scope and objectives.
 - `docs/architecture.md`: explanation of the Onion architecture.
+- `docs/development.md`: how to run the project locally (database, configuration, migrations).
 - `docs/decisions/`: one short file per decision, with Decision, Why and To Decide sections. Edit it in place when a decision changes.
 - `docs/design/`: one file per topic (data model, streaming, transcoding), written when the feature is built.
 
@@ -25,7 +26,7 @@ Before proposing or reviewing anything, read `docs/decisions/` and follow what i
 ```
 dotnet build
 dotnet test
-dotnet run --project src/Wane.Api
+dotnet run --project src/Wane.Host
 ```
 
 ## Conventions

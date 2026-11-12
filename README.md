@@ -26,8 +26,15 @@ See `docs/proposal.md` for the full scope.
 
 ```
 dotnet build
-dotnet run --project src/Wane.Api
+dotnet run --project src/Wane.Host
 ```
+
+## Documentation
+
+- [Development guide](docs/development.md): set up the project locally, configuration and database migrations.
+- [Architecture](docs/architecture.md): the Onion architecture explained.
+- [Decisions](docs/decisions/): one short file per decision.
+- [Project proposal](docs/proposal.md): scope and objectives.
 
 ## Structure
 
@@ -37,7 +44,8 @@ wane/
 │   ├── Wane.Domain/          # entities and business rules
 │   ├── Wane.Application/     # use cases and interfaces
 │   ├── Wane.Infrastructure/  # EF Core, storage, cache
-│   └── Wane.Api/             # HTTP API and startup
+│   ├── Wane.Api/             # HTTP API (controllers)
+│   └── Wane.Host/            # executable, configuration and startup
 ├── tests/
 ├── docs/
 │   ├── proposal.md           # project scope

@@ -28,7 +28,6 @@ logs/
 
 # Secrets and local config
 .env
-.env.*
 appsettings.Local.json
 *.pfx
 secrets.json

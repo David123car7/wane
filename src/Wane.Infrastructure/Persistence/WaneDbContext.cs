@@ -9,11 +9,12 @@ namespace Wane.Infrastructure.Persistence;
 /// </summary>
 public class WaneDbContext : DbContext
 {
-    /// <summary>The users of the platform.</summary>
     public DbSet<User> Users { get; set; }
-
-    /// <summary>The profiles of the users.</summary>
     public DbSet<Profile> Profiles { get; set; }
+    public DbSet<Track> Tracks { get; set; }
+    public DbSet<TrackFile> TrackFiles { get; set; }
+    public DbSet<Playlist> Playlists { get; set; }
+    public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
 
     /// <summary>Creates the context with the given options.</summary>
     /// <param name="options">The options that configure the context, such as the database provider.</param>

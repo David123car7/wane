@@ -128,7 +128,7 @@ namespace Wane.Infrastructure.Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<string>("Tittle")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
@@ -141,7 +141,7 @@ namespace Wane.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Tittle")
+                    b.HasIndex("Title")
                         .IsUnique();
 
                     b.ToTable("tracks", (string)null);

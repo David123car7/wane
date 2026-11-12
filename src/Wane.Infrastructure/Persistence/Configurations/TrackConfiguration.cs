@@ -18,8 +18,8 @@ public class TrackConfiguration : IEntityTypeConfiguration<Track>
     {
         builder.ToTable("tracks");
         builder.HasKey(p => p.Id);
-        builder.HasIndex(p => p.Tittle).IsUnique();
-        builder.Property(p => p.Tittle).IsRequired().HasMaxLength(100);
+        builder.HasIndex(p => p.Title).IsUnique();
+        builder.Property(p => p.Title).IsRequired().HasMaxLength(100);
         builder.Property(p => p.Genre).IsRequired().HasMaxLength(100);
         builder.Property(p => p.Artist).HasMaxLength(100);
         builder.Property(p => p.Year);

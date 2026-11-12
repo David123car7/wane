@@ -9,7 +9,7 @@ public class Track
     public Guid Id { get; set; }
 
     /// <summary>Title of the track. Required, unique, up to 100 characters.</summary>
-    public string? Tittle { get; set; }
+    public string? Title { get; set; }
 
     /// <summary>Artist of the track. Optional, up to 100 characters.</summary>
     public string? Artist { get; set; }

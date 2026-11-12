@@ -34,6 +34,9 @@ dotnet run --project src/Wane.Host
 - Language: English for code, comments and docs.
 - Keep this file short. Put detail in `docs/`.
 - Create a new docs folder only when it has a second file. Docs describe decisions and design, not code.
+- Branch names: `<type>/<short-description>`, lowercase, words separated by hyphens (for example `feat/docs-decisions`).
+- Commit messages: `<type>: <short summary>`, in the imperative (for example `fix: rename Track title`).
+- Types, the same for branches and commits: `feat` (new feature), `fix` (bug fix), `docs`, `refactor`, `test`, `chore` (tooling, dependencies, repo maintenance).
 
 ## Pull requests
 

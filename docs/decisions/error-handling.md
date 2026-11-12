@@ -2,7 +2,9 @@
 
 ## Decision
 
-The Application layer reports failures by throwing specific exceptions (for example not found, conflict, unauthorized). One global exception handler in `Wane.Api` catches them and converts each to the right HTTP status code with a `ProblemDetails` response. Unexpected exceptions become a 500 `ProblemDetails`. Controllers stay thin and do not catch exceptions.
+The Application layer reports failures by throwing specific exceptions (not found, conflict and unauthorized, mapped to 404, 409 and 401). One global exception handler in `Wane.Api` catches them and converts each to the right HTTP status code with a `ProblemDetails` response. Unexpected exceptions become a 500 `ProblemDetails`. Controllers stay thin and do not catch exceptions.
+
+Validation errors are not exceptions from the services: invalid input is rejected with a 400 and field errors by data annotations and `[ApiController]` before the service runs (see `validation-and-mapping.md`). Rules that depend on stored data, such as a duplicate profile name, are conflicts. A forbidden exception (403) and a validation exception are not defined, because with a single login with full access there is nothing to forbid, and nothing needs field errors from inside a service.
 
 ## Why
 
@@ -17,6 +19,5 @@ If exceptions turn out to hide too much, services could return a Result type (a 
 
 ## To Decide
 
-- The exact set of Application exceptions.
-- How validation errors are reported (400 with field errors), together with the validation decision.
+- When to add a forbidden or a validation exception, if a case appears.
 - Whether to switch to a Result type, and when.

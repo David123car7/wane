@@ -3,7 +3,7 @@
 ## Decision
 
 **Validation** has two layers:
-- Domain invariants: entities refuse invalid state themselves (for example an empty playlist name), wherever the data comes from.
+- Domain invariants: entities refuse invalid state themselves (for example an empty playlist name), wherever the data comes from. `User` and `Profile` do this with a constructor that generates the id and checks the rules, private setters, and one method per change (for example changing the password hash or renaming a profile). Each method checks its rule, sets the value and updates `UpdatedAt`. The other entities keep plain setters until they have rules worth protecting. Services call these methods and never set the properties directly.
 - Request validation: data annotations (`[Required]`, `[StringLength]` and similar) on the DTOs. With `[ApiController]` on the controllers, invalid input becomes a 400 response with field errors automatically.
 
 Rules that depend on stored data (for example a duplicate profile name) are business checks in the services and throw the matching exception, as described in `error-handling.md`.
@@ -13,6 +13,8 @@ Rules that depend on stored data (for example a duplicate profile name) are busi
 ## Why
 
 It is the lowest-ceremony option that works with controllers out of the box, with no extra dependencies. The project is small, and explicit mapping is checked by the compiler, fast and easy to follow.
+
+Methods on the entity put each rule in one place, so no service can store an invalid username or name by forgetting a check, and the rules are tested as plain domain unit tests with no database. `User` and `Profile` are the entities with real rules. For entities that only hold descriptive data, a method that just assigns a value would be ceremony.
 
 ## Possible change: FluentValidation
 
